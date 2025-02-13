@@ -2,7 +2,27 @@
 #include <iostream>
 
 int main() {
+	setlocale(LC_ALL, "Russian");
+	std::srand(std::time(nullptr));
 
+	int width, height;
+	std::cout << "¬ведите ширину и высоту картины: ";
+	std::cin >> width >> height;
 
+	std::ofstream outFile("pic.txt");
+	if (!outFile) {
+		std::cerr << "ќишбка при открытии файла!\n";
+		return 1;
+	}
+	
+	for (int i = 0; i < height; ++i)	{
+		for (int j = 0; j < width; ++j)	{
+			outFile << (std::rand() % 2);
+		}
+		outFile << '\n';
+	}
 
+	outFile.close();
+	std::cout << "‘айл pic.txt успешно создан!\n";
+	return 0;
 }
