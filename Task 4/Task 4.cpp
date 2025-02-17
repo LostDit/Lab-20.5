@@ -27,12 +27,12 @@ void printATMState(const vector<int>& atm) {
     setlocale(LC_ALL, "Russian");
 
     int total = 0;
-    cout << "Ñîñòîÿíèå áàíêîìàòà:" << endl;
+    cout << "Ð¡Ð¾ÑÑ‚Ð¾ÑÐ½Ð¸Ðµ Ð±Ð°Ð½ÐºÐ¾Ð¼Ð°Ñ‚Ð°:" << endl;
     for (size_t i = 0; i < NOMINALS.size(); i++) {
-        cout << NOMINALS[i] << " ðóá.: " << atm[i] << " øò." << endl;
+        cout << NOMINALS[i] << " Ñ€ÑƒÐ±.: " << atm[i] << " ÑˆÑ‚." << endl;
         total += atm[i] * NOMINALS[i];
     }
-    cout << "Îáùàÿ ñóììà: " << total << " ðóá." << endl;
+    cout << "ÐžÐ±Ñ‰Ð°Ñ ÑÑƒÐ¼Ð¼Ð°: " << total << " Ñ€ÑƒÐ±." << endl;
 }
 
 void refillATM(vector<int>& atm) {
@@ -70,7 +70,7 @@ bool withdrawMoney(vector<int>& atm, int amount) {
         return true;
     }
     else {
-        cout << "Íåâîçìîæíî âûäàòü óêàçàííóþ ñóììó." << endl;
+        cout << "ÐÐµÐ²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ Ð²Ñ‹Ð´Ð°Ñ‚ÑŒ ÑƒÐºÐ°Ð·Ð°Ð½Ð½ÑƒÑŽ ÑÑƒÐ¼Ð¼Ñƒ." << endl;
         return false;
     }
 }
@@ -83,7 +83,7 @@ int main() {
 
     char command;
     while (true) {
-        cout << "Ââåäèòå êîìàíäó (+ äëÿ ïîïîëíåíèÿ, - äëÿ ñíÿòèÿ, q äëÿ âûõîäà): ";
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñƒ (+ Ð´Ð»Ñ Ð¿Ð¾Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ñ, - Ð´Ð»Ñ ÑÐ½ÑÑ‚Ð¸Ñ, q Ð´Ð»Ñ Ð²Ñ‹Ñ…Ð¾Ð´Ð°): ";
         cin >> command;
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
@@ -92,13 +92,13 @@ int main() {
         }
         else if (command == '-') {
             int amount;
-            cout << "Ââåäèòå ñóììó äëÿ ñíÿòèÿ: ";
+            cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑƒÐ¼Ð¼Ñƒ Ð´Ð»Ñ ÑÐ½ÑÑ‚Ð¸Ñ: ";
             cin >> amount;
 
             if (cin.fail()) {
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                cout << "Îøèáêà: ââåäèòå êîððåêòíîå ÷èñëî." << endl;
+                cout << "ÐžÑˆÐ¸Ð±ÐºÐ°: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾." << endl;
                 continue;
             }
 
@@ -106,14 +106,14 @@ int main() {
                 withdrawMoney(atm, amount);
             }
             else {
-                cout << "Ñóììà äîëæíà áûòü êðàòíà 100." << endl;
+                cout << "Ð¡ÑƒÐ¼Ð¼Ð° Ð´Ð¾Ð»Ð¶Ð½Ð° Ð±Ñ‹Ñ‚ÑŒ ÐºÑ€Ð°Ñ‚Ð½Ð° 100." << endl;
             }
         }
         else if (command == 'q') {
             break;
         }
         else {
-            cout << "Íåèçâåñòíàÿ êîìàíäà." << endl;
+            cout << "ÐÐµÐ¸Ð·Ð²ÐµÑÑ‚Ð½Ð°Ñ ÐºÐ¾Ð¼Ð°Ð½Ð´Ð°." << endl;
         }
     }
 
