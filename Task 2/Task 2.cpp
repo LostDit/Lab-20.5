@@ -6,12 +6,12 @@ int main() {
 	std::srand(std::time(nullptr));
 
 	int width, height;
-	std::cout << "Ââåäèòå øèðèíó è âûñîòó êàðòèíû: ";
+	std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑˆÐ¸Ñ€Ð¸Ð½Ñƒ Ð¸ Ð²Ñ‹ÑÐ¾Ñ‚Ñƒ ÐºÐ°Ñ€Ñ‚Ð¸Ð½Ñ‹: ";
 	std::cin >> width >> height;
 
 	std::ofstream outFile("pic.txt");
 	if (!outFile) {
-		std::cerr << "Îèøáêà ïðè îòêðûòèè ôàéëà!\n";
+		std::cerr << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¿Ñ€Ð¸ Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ð¸ Ñ„Ð°Ð¹Ð»Ð°!\n";
 		return 1;
 	}
 	
@@ -23,6 +23,6 @@ int main() {
 	}
 
 	outFile.close();
-	std::cout << "Ôàéë pic.txt óñïåøíî ñîçäàí!\n";
+	std::cout << "Ð¤Ð°Ð¹Ð» pic.txt ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ ÑÐ¾Ð·Ð´Ð°Ð½!\n";
 	return 0;
 }
