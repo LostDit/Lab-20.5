@@ -15,15 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Task 3.cpp">
+    <ClCompile Include="Task 4.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="river.txt">
-      <Filter>Исходные файлы</Filter>
-    </Text>
-    <Text Include="basket.txt">
+    <Text Include="atm_state.bin">
       <Filter>Исходные файлы</Filter>
     </Text>
   </ItemGroup>
