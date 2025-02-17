@@ -7,18 +7,18 @@ using namespace std;
 int main() {
     setlocale(LC_ALL, "Russian");
     string target_fish;
-    cout << "Ââåäèòå âèä ðûáû, êîòîðóþ õîòèòå ïîéìàòü: ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ð¸Ð´ Ñ€Ñ‹Ð±Ñ‹, ÐºÐ¾Ñ‚Ð¾Ñ€ÑƒÑŽ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ Ð¿Ð¾Ð¹Ð¼Ð°Ñ‚ÑŒ: ";
     cin >> target_fish;
 
     ifstream river_file("river.txt");
     ofstream basket_file("basket.txt", ios::app);
 
     if (!river_file) {
-        cerr << "Îøèáêà: íå óäàëîñü îòêðûòü ôàéë river.txt" << endl;
+        cerr << "ÐžÑˆÐ¸Ð±ÐºÐ°: Ð½Ðµ ÑƒÐ´Ð°Ð»Ð¾ÑÑŒ Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚ÑŒ Ñ„Ð°Ð¹Ð» river.txt" << endl;
         return 1;
     }
     if (!basket_file) {
-        cerr << "Îøèáêà: íå óäàëîñü îòêðûòü ôàéë basket.txt" << endl;
+        cerr << "ÐžÑˆÐ¸Ð±ÐºÐ°: Ð½Ðµ ÑƒÐ´Ð°Ð»Ð¾ÑÑŒ Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚ÑŒ Ñ„Ð°Ð¹Ð» basket.txt" << endl;
         return 1;
     }
 
@@ -34,7 +34,7 @@ int main() {
     river_file.close();
     basket_file.close();
 
-    cout << "Âû ïîéìàëè " << count << " ðûá(û) âèäà " << target_fish << "." << endl;
+    cout << "Ð’Ñ‹ Ð¿Ð¾Ð¹Ð¼Ð°Ð»Ð¸ " << count << " Ñ€Ñ‹Ð±(Ñ‹) Ð²Ð¸Ð´Ð° " << target_fish << "." << endl;
 
     return 0;
 }
